@@ -10,30 +10,36 @@
                 return;
             }
             string[] words = line.Split();
-            var validWords = words
-                .Where(word =>
-                    word.Any(char.IsLetter)
-                    && word.All(c => char.IsLetter(c) || c == '-' || c == '\'')
-                )
-                .ToArray();
-
-            if (validWords.Length == 0)
+            var hasSymbolsOrNumber = words.Any(word => word.Any(c=> !char.IsLetter(c)));
+            if (hasSymbolsOrNumber)
             {
-                Console.WriteLine("Строка содержит только цифры или символы");
+                Console.WriteLine("Строка содержит символы или цифры");
                 return;
             }
+            var longWord = words.OrderByDescending(word => word.Length).First();
+            Console.WriteLine($"Самое длинное слово: {longWord}");
 
-            if (words.Length != validWords.Length)
-            {
-                Console.WriteLine("Строка содержит цифры или символы");
-            }
-            // добавить проверку если самых длинных слов несколько
-            var maxLength = validWords.Max(word => word.Length);
-            var longWords = validWords.Where(word => word.Length == maxLength).ToArray();
-            Console.WriteLine(
-                longWords.Length == 1
-                    ? $"Слово с максимальной длиной: {longWords[0]}"
-                    : $"Слова с максимальной длиной ({maxLength}): {string.Join(",", longWords)}"
-            );
+                            //Обработка случаев для слов с " - " и " ' "
+            // var validWords = words
+            //     .Where(word =>
+            //         word.Any(char.IsLetter)
+            //         && word.All(c => char.IsLetter(c) || c == '-' || c == '\'')
+            //     )
+            //     .ToArray();
+
+            // if (validWords.Length == 0)
+            // {
+            //     Console.WriteLine("Строка содержит только цифры или символы");
+            //     return;
+            // }
+            
+                            //Обработка случаев если самых длинных слов несколько
+            // var maxLength = words.Max(word => word.Length);
+            // var longWords = words.Where(word => word.Length == maxLength).ToArray();
+            // Console.WriteLine(
+            //     longWords.Length == 1
+            //         ? $"Слово с максимальной длиной: {longWords[0]}"
+            //         : $"Слова с максимальной длиной ({maxLength}): {string.Join(",", longWords)}"
+            // );
     }
 }
