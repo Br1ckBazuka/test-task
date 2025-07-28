@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yato\\RiderProjects\\Task1\\Task1\\Task1.csproj",
+      "projectUniqueName": "C:\\Users\\Yato\\Documents\\GitHub\\test-task\\Task1\\Task1\\Task1.csproj",
       "projectName": "Task1",
-      "projectPath": "C:\\Users\\Yato\\RiderProjects\\Task1\\Task1\\Task1.csproj",
+      "projectPath": "C:\\Users\\Yato\\Documents\\GitHub\\test-task\\Task1\\Task1\\Task1.csproj",
       "packagesPath": "C:\\Users\\Yato\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yato\\RiderProjects\\Task1\\Task1\\obj\\",
+      "outputPath": "C:\\Users\\Yato\\Documents\\GitHub\\test-task\\Task1\\Task1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yato\\AppData\\Roaming\\NuGet\\NuGet.Config"
