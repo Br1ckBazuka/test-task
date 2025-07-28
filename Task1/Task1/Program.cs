@@ -28,4 +28,3 @@
         Console.WriteLine($"Самое длинное слово: {longWord}");
     }
 }
-
